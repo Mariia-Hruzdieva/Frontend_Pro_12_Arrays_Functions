@@ -55,7 +55,7 @@ let res = users.reduce(function (accumulator, currentItem) {
     }
     return accumulator;
 }, []);
-console.log('Масив телефонних номерів користувачів, у яких баланс більше 2000 доларів: ' + res);
+console.log('Масив телефонних номерів користувачів, у яких баланс більше 2000 доларів: ' + res.join(', '));
 
 let allMoney = users.reduce(function (accumulator, currentItem) {
     accumulator += +(currentItem.balance.replaceAll('$', '').replaceAll(',', '')) * 100;
